@@ -6,7 +6,7 @@ import "./App.css"
 function App() {
   return (<>
     <div className="flex justify-center  gap-2 p-5">
-      <BorderButton label="Primary" disabled={true} />
+      <BorderButton label="Primary" />
       <BorderButton label="Secondary" themeType="secondary"/>
       </div>
     <RootRouter />
@@ -20,6 +20,9 @@ function App() {
       <li>Create All themes of autosearch</li>
       <li>Create All themes of table with export</li>
       <li>Create All themes of pagination</li>
+      <li>Notify with different theme</li>
+      <li>Model</li>
+      
     </ol>
   </>
   );

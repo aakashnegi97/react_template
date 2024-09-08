@@ -1,25 +1,34 @@
 import React from "react";
-import borderButtonClass from "../../../utils/customClasses/borderButton";
+import { Button } from "@mui/material";
 
-const BorderButton = ({ label = "", name = "", type = "", onClick = () => { }, themeType = "primary", className = "", id = "", startEndorsement, endEndorsement, disabled }) => {
+const BorderButton = (
+    { 
+        name = "", 
+        type = "", 
+        onClick = () => { }, 
+        themeType = "primary", 
+        className = "", 
+        id = "", 
+        disabled,
+        variant="contained"
+    }) => {
 
 
 
     return (
-        <button
-            name={name}
-            id={id}
-            className={`${disabled ? "" : "color-spread-button relative"} ${borderButtonClass({ disabled })[themeType]} ${className}`}
-            type={type}
-            onClick={onClick}
-            disabled={disabled}
-        >
-            <span className="flex items-center gap-2">
-                {startEndorsement ? startEndorsement : null}
-                <span className="flex-grow text-center">{label}</span>
-            </span>
-            {endEndorsement ? endEndorsement : null}
-        </button>
+        <>
+            <Button
+                variant={variant}
+                id={id}
+                className={`${className}`}
+                type={type}
+                onClick={onClick}
+                disabled={disabled}
+                color={themeType}
+            >
+                {name}
+            </Button>
+        </>
     );
 };
 

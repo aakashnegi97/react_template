@@ -1,5 +1,3 @@
-const { buttonConfig } = require("./src/config/themeCongif");
-
 // tailwind.config.js
 module.exports = {
   mode: 'jit',
@@ -7,9 +5,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {
-        button: buttonConfig
-      },
     },
   },
   options: {
